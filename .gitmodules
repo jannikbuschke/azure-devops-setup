@@ -1,0 +1,6 @@
+[submodule "app/web"]
+	path = app/web
+	url = https://github.com/jannikbuschke/cra-antd-x.git
+[submodule "glow"]
+	path = glow
+	url = https://github.com/jannikbuschke/glue-netcore.git
