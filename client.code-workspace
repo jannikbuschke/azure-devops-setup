@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "app",
+      "path": "app\\web"
+    },
+    {
+      "name": "glow",
+      "path": "glow\\core\\web"
+    }
+  ],
+  "settings": {}
+}
