@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app", "app\app.csproj", "{4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", "{302F2CC3-2134-44F7-BCD0-93AB0BA9948E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core", "glow\core\core.csproj", "{60FCDC33-4D67-40D0-BB81-11DF6C3C5DB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{302F2CC3-2134-44F7-BCD0-93AB0BA9948E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{302F2CC3-2134-44F7-BCD0-93AB0BA9948E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{302F2CC3-2134-44F7-BCD0-93AB0BA9948E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FCDC33-4D67-40D0-BB81-11DF6C3C5DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FCDC33-4D67-40D0-BB81-11DF6C3C5DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FCDC33-4D67-40D0-BB81-11DF6C3C5DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FCDC33-4D67-40D0-BB81-11DF6C3C5DB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

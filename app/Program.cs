@@ -1,5 +1,7 @@
 using System;
 using System.IO;
+using app;
+using MediatR;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Azure.KeyVault;

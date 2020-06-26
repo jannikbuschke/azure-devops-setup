@@ -61,6 +61,10 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\glow\core\core.csproj" />
+  </ItemGroup>
+
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)build\**; $(SpaRoot)build-ssr\**" />

@@ -6,6 +6,6 @@
     <RtTargetFile>$(ProjectDir)web\src\models.ts</RtTargetFile>
     <RtTargetDirectory>$(ProjectDir)web\src\models</RtTargetDirectory>
     <RtBypassTypeScriptCompilation>false</RtBypassTypeScriptCompilation>
-    <RtDisable>false</RtDisable>
+    <RtDisable>true</RtDisable>
   </PropertyGroup>
 </Project>

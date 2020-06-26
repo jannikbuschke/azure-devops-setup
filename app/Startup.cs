@@ -1,7 +1,9 @@
 using System.Linq;
 using System.Net;
+using app;
 using AutoMapper;
 using AutoMapper.EquivalencyExpression;
+using Glue.AzdoAuthentication;
 using MediatR;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
@@ -34,11 +36,22 @@ namespace AzDoSetup
 
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration.GetValue<string>("ConnectionString");
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
-                });
+                })
+                .AddAzdo(DatabaseProvider.SqlServer, options =>
+                {
+                    options.PAT = "f3ghayexn4r2fdmnuqt5nxtla3wyxzonuri6m424g5jquhs5bsua";
+                    options.OrganizationBaseUrl = "https://dev.azure.com/agenda-project";
 
+                }, configureDb =>
+                 {
+                     configureDb.UseSqlServer(connectionString);
+                 });
+
+            services.ConfigureSingleton<SetupSettings>("Setup");
 
             services.AddApplicationInsightsTelemetry();
 
@@ -52,6 +65,7 @@ namespace AzDoSetup
                     options.SerializerSettings.Formatting = Formatting.Indented;
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 });
+
 
             services.AddVersionedApiExplorer(o => o.GroupNameFormat = "'v'VVV");
 
@@ -77,7 +91,7 @@ namespace AzDoSetup
 
             services.AddDbContext<DataContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetValue<string>("ConnectionString"));
+                options.UseSqlServer(connectionString);
             });
         }
 
